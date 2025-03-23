@@ -453,4 +453,5 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## 20. Support
 For support, email support@careernavigator.com or create an issue in the repository.
 #   c a r e e r n a v i g a t o r  
+ #   c a r e e r n a v i g a t o r  
  

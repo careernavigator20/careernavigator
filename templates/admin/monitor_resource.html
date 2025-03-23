@@ -1,0 +1,73 @@
+{% extends 'admin/base.html' %}
+{% block title %}Monitor Resources - Admin Panel{% endblock %}
+{% block content %}
+
+<div>
+    <h1 class="section-title">Monitor Resources</h1>
+
+    <div class="table-actions">
+        <div class="search-filters">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search counselors...">
+            </div>
+            <select class="filter-select">
+                <option value="">Resource Type</option>
+                <option value="career">Career Development</option>
+                <option value="academic">Academic Advising</option>
+                <option value="personal">Personal Growth</option>
+            </select>
+            <select class="filter-select">
+                <option value="">Managed By</option>
+                <option value="approved">Approved</option>
+                <option value="pending">Pending</option>
+                <option value="rejected">Rejected</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Resource Name</th>
+                    <th>Resource Type</th>
+                    <th>Managed By</th>
+                    <th>Date Added</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example Row -->
+                <tr>
+                    <td>Resume Writing Guide</td>
+                    <td>PDF</td>
+                    <td>John Doe</td>
+                    <td>2025-03-17</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Repeat for other resources -->
+                <tr>
+                    <td>Interview Prep Tips</td>
+                    <td>Article</td>
+                    <td>Jane Smith</td>
+                    <td>2025-03-15</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+

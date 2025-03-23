@@ -1,0 +1,70 @@
+{% extends 'student/stud-base.html' %}
+{% block title %}Student Dashboard{% endblock %}
+{% block content %}
+    <div class="appointments-tabs">
+        <button class="appointment-tab upcoming-btn active" data-tab="upcoming">Upcoming</button>
+        <button class="appointment-tab completed-btn" data-tab="completed">Completed</button>
+        <button class="appointment-tab canceled-btn" data-tab="canceled">Canceled</button>
+    </div>
+
+    <div class="appointments">
+        <div class="appointments-content">
+            <div class="appointments-list" id="upcomingAppointments">
+                <!-- Appointment Items -->
+                <div class="appointment-item">
+                    <div class="appointment-header">
+                        <div class="appointment-title">
+                            <h4>Career Planning Session</h4>
+                            <span class="appointment-date">Tomorrow, 2:00 PM</span>
+                        </div>
+                        <div class="appointment-status upcoming">Upcoming</div>
+                    </div>
+                    <div class="appointment-body">
+                        <div class="counselor-info">
+                            <div class="counselor-img">
+                                <img src="../../static/img/coun_uploads/dummy.jpg" alt="Dr. Smith">
+                            </div>
+                            <div style="margin-top: 25px;">
+                                <h5>Dr. Sarah Smith</h5>
+                                <p>Career Development Specialist</p>
+                            </div>
+                        </div>
+                        <div class="appointment-actions" style="margin-top: 15px;">
+                            <button class="btn btn-outline reschedule-btn">Reschedule</button>
+                            <button class="btn btn-danger cancel-btn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="appointments-content">
+            <div class="appointments-list" id="upcomingAppointments">
+                <!-- Appointment Items -->
+                <div class="appointment-item">
+                    <div class="appointment-header">
+                        <div class="appointment-title">
+                            <h4>Career Planning Session</h4>
+                            <span class="appointment-date">Tomorrow, 2:00 PM</span>
+                        </div>
+                        <div class="appointment-status upcoming">Upcoming</div>
+                    </div>
+                    <div class="appointment-body">
+                        <div class="counselor-info">
+                            <div class="counselor-img">
+                                <img src="../../static/img/coun_uploads/dummy.jpg" alt="Dr. Smith">
+                            </div>
+                            <div style="margin-top: 25px;">
+                                <h5>Dr. Sarah Smith</h5>
+                                <p>Career Development Specialist</p>
+                            </div>
+                        </div>
+                        <div class="appointment-actions" style="margin-top: 15px;">
+                            <button class="btn btn-outline reschedule-btn">Reschedule</button>
+                            <button class="btn btn-danger cancel-btn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

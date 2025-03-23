@@ -1,0 +1,37 @@
+{% extends 'student/stud-base.html' %}
+{% block title %}Student Dashboard{% endblock %}
+{% block content %}
+<div class="schedule-container">
+    <div class="calendar-section">
+        <div class="calendar" id="appointmentCalendar"></div>
+    </div>
+    <div class="booking-section">
+        <h3>Book Appointment</h3>
+        <form id="bookingForm" class="booking-form" method="POST" action="/book-appointment">
+            <div class="form-group">
+                <label for="counselorDropdown">Select Counselor</label>
+                <select id="counselorDropdown" name="counselor_id" required>
+                    <option value="">-- Choose a Counselor --</option>
+                    {% for counselor in counselors %}
+                        <option value="{{ counselor.id }}">{{ counselor.full_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="datePicker">Select Date</label>
+                <input type="date" id="datePicker" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="timeSlotDropdown">Select Time Slot</label>
+                <select id="timeSlotDropdown" name="time_slot" required>
+                    <option value="">-- Select a Time Slot --</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Confirm</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
